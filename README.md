@@ -6,11 +6,69 @@ A new Flutter project.
 
 ### lint && format
 
-dart analyze -> to be executed inside the CI/CD flow
-dart fix -n -> (--dry-run) Preview the proposed changes but make no changes.
-dart fix --apply -> Apply the all the recommended changes
+`dart analyze` -> to be executed inside the CI/CD flow
+`dart fix -n` -> (--dry-run) Preview the proposed changes but make no changes.
+`dart fix --apply` -> Apply the all the recommended changes
 
 (If it's extrictly justified you can use `//ignore: name_of_lint` and `// ignore_for_file: name_of_lint` syntax on the line or in the file producing the lint.)
+
+### testing (unit & widget)
+`flutter test`
+
+### testing (integration)
+
+
+## Architecture:
+
+
+## Error Managing:
+
+
+## Testing:
+
+
+
+## Versioning:
+
+We will use an adaptation of semantic release:
+- [Semantic Release Documentation](https://github.com/semantic-release/semantic-release)
+
+hotfix:
+feat:
+bugfix:
+
+Get release commits:
+git log --oneline <tag1>..<tag2>
+git log --pretty=format:"%s" <tag1>..<tag2>
+git log --pretty=format:"%s" v2.0.4..v2.0.5
+
+
+On Android, we need to set two variables:
+→ versionCode, that must be a unique and incremental positive integer. Each release must use a versionCode that is strictly greater than previous releases.
+→ versionName, the actual version displayed to the user, which can be pretty much anything
+On iOS, we need to pass:
+→ a version number, (CFBundleShortVersionString) that is required to be a “three period-separated integers, such as 10.14.1.”
+→ a build string (CFBundleVersion) that should be a numerical or semver string, as long as it is unique for a given version number
+
+
+
+## Branch Management:
+
+
+## Configuration (feature flags, live settings):
+
+
+## Force Update (Suggested, A/B Testing, BigBang):
+
+
+## CI/CD:
+
+Fastlane
+
+
+
+
+
 
 
 ## Getting Started

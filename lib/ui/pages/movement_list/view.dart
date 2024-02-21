@@ -25,7 +25,12 @@ class MovementListScreenView extends StatelessWidget {
                   child: const Text('movement list'),
             )
           ),
-        ])
+        ]),
+        floatingActionButton: FloatingActionButton(
+          child: const Icon( Icons.add ),
+          onPressed: () {
+          },
+        ),
     );
   }
 }
