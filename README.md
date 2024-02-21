@@ -13,18 +13,40 @@ A new Flutter project.
 (If it's extrictly justified you can use `//ignore: name_of_lint` and `// ignore_for_file: name_of_lint` syntax on the line or in the file producing the lint.)
 
 ### testing (unit & widget)
-`flutter test`
+`flutter test tests/unit`
+`flutter test tests/behavior`
 
 ### testing (integration)
+`flutter test tests/integration`
 
 
 ## Architecture:
+https://fluttersamples.com/
+
+DDD:
+https://medium.com/@jonathanloscalzo/domain-driven-design-principios-beneficios-y-elementos-primera-parte-aad90f30aa35
+
+## State management
+Riverpod
+
+## Lint:
+https://medium.com/podiihq/setting-up-lint-rules-in-dart-flutter-1ebbed0418a6
 
 
 ## Error Managing:
 
 
+## Analytics:
+
+
+## Error log:
+
+Sentry
+Firebase crashlytics
+
+
 ## Testing:
+- [Flutter Testing Documentation](https://docs.flutter.dev/testing/overview)
 
 
 
