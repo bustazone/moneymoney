@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:moneymoney/core/movement/domain/models/movement.dart';
 
 class MovementListScreenView extends StatelessWidget {
+  final List<Movement> movements;
   final Function onFilter;
   final Function onNew;
   final Function onEdit;
 
   const MovementListScreenView(
-      {required this.onFilter,
+      {required this.movements,
+      required this.onFilter,
       required this.onNew,
       required this.onEdit,
       Key? key})
@@ -22,13 +25,14 @@ class MovementListScreenView extends StatelessWidget {
           Center(
               child: Container(
                   margin: const EdgeInsets.all(8),
-                  child: const Text('movement list'),
+                  child: Text('movement list -> ${movements.length}'),
             )
           ),
         ]),
         floatingActionButton: FloatingActionButton(
           child: const Icon( Icons.add ),
           onPressed: () {
+            onFilter();
           },
         ),
     );

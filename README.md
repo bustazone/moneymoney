@@ -23,8 +23,21 @@ A new Flutter project.
 ## Architecture:
 https://fluttersamples.com/
 
-DDD:
+    DDD:
 https://medium.com/@jonathanloscalzo/domain-driven-design-principios-beneficios-y-elementos-primera-parte-aad90f30aa35
+
+    dependency injection:
+https://www.baeldung.com/cs/dependency-injection-vs-service-locator
+https://www.sandromaglione.com/articles/how_to_implement_dependecy_injection_in_flutter
+https://medium.com/@flutterdynasty/dependency-injection-in-flutter-0f308870d1a5
+https://www.dhiwise.com/post/dependency-injection-in-flutter-boosting-app-performance
+https://dev.to/alvbarros/dependency-injection-in-flutter-598k
+
+https://pub.dev/packages/get_it
+https://pub.dev/packages/injectable
+
+## DB
+https://isar.dev/es/
 
 ## State management
 Riverpod
@@ -74,7 +87,7 @@ On iOS, we need to pass:
 
 
 
-## Branch Management:
+## Branch Management/Gitflow:
 
 
 ## Configuration (feature flags, live settings):
@@ -83,15 +96,75 @@ On iOS, we need to pass:
 ## Force Update (Suggested, A/B Testing, BigBang):
 
 
+## Accesibility AA
+https://usability.yale.edu/web-accessibility/articles/wcag2-checklist
+https://accessible.org/wcag/
+
+## OTP
+https://pub.dev/packages/otp_autofill
+https://pub.dev/packages/sms_autofill
+
+## Config
+https://pub.dev/packages/flutter_config
+
+## Accesos directos
+https://pub.dev/packages/quick_actions
+
 ## CI/CD:
 
 Fastlane
 
+## Biometric, pin, etc login
+
+https://pub.dev/packages/local_auth
+
+## Screen orientation
+
+https://www.flutterbeads.com/change-lock-device-orientation-portrait-landscape-flutter/?utm_content=cmp-true
+
+## i18n & l10n
+https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
+
+## animations && lottie
+
+https://pub.dev/packages/lottie
+
+## dialog
+https://api.flutter.dev/flutter/material/AlertDialog-class.html
+https://api.flutter.dev/flutter/material/showDialog.html
+
+## loader, tooltip
+https://api.flutter.dev/flutter/widgets/OverlayPortal-class.html
+
+## snackbar
+https://api.flutter.dev/flutter/material/ScaffoldMessengerState-class.html
+
+## Storages
+
+https://pub.dev/packages/flutter_secure_storage
 
 
+## Navigation
 
 
+## Push Notifications
 
+
+## Serializer
+
+https://pub.dev/packages/json_serializable
+dart run build_runner build --delete-conflicting-outputs
+
+## Security
+https://www.indusface.com/learning/how-to-implement-root-detection-in-android-applications/
+https://m2pfintech.com/blog/how-to-block-android-app-installation-in-a-rooted-device/
+https://www.linkedin.com/pulse/limitations-google-play-integrity-api-ex-safetynet-criticalblue-47cec
+https://betterprogramming.pub/preventing-jailbreak-in-ios-apps-best-practices-and-techniques-c1364c833c08
+
+## Native Bridge
+https://docs.flutter.dev/platform-integration/platform-channels
+https://medium.com/@sdycode/event-channel-method-channel-in-flutter-e6f697472189
+https://medium.com/@iiharish97ii/method-channel-in-flutter-bridging-native-code-and-flutter-with-two-way-communication-788d1e91c8c1
 
 ## Getting Started
 

@@ -20,7 +20,7 @@ class MovementListFilterScreenView extends StatelessWidget {
           Center(
               child: Container(
                   margin: const EdgeInsets.all(8),
-                  child: const Text('movement edit'),
+                  child: const Text('movement filter'),
             )
           ),
         ])
