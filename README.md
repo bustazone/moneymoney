@@ -60,7 +60,8 @@ Firebase crashlytics
 
 ## Testing:
 - [Flutter Testing Documentation](https://docs.flutter.dev/testing/overview)
-
+https://pub.dev/packages/mockito
+https://pub.dev/packages/mocktail
 
 
 ## Versioning:

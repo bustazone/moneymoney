@@ -15,7 +15,7 @@ class GlobalLoaderOverlay extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final globalLoaderOverlayProvider_ = ref.watch(globalLoaderOverlayProvider);
     if (globalLoaderOverlayProvider_ > 0) {
-      return Center(child: Container(color: const Color.fromRGBO(100, 100, 100, 0.4), child: Container(color: Colors.red, height: 200, width: 200,),));
+      return Center(child: Container(key: const Key('loader'), color: const Color.fromRGBO(100, 100, 100, 0.4), child: Container(color: Colors.red, height: 200, width: 200,),));
     } else {
       return Container();
     }

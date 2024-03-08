@@ -8,7 +8,7 @@ class GlobalLoaderOverlayNotifier extends Notifier<int> {
     return 0;
   }
 
-  void showLoader({int timeoutSeconds = 6}) {
+  void showLoader({int timeoutSeconds = 0}) {
     state = state + 1;
     if (timeoutSeconds > 0) {
       Future.delayed(Duration(seconds: timeoutSeconds), () {
