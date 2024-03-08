@@ -19,12 +19,28 @@ import 'package:moneymoney/ui/components/snackbar_service/service_int.dart';
 import 'package:moneymoney/ui/navigation/router.dart';
 import 'package:moneymoney/common/overlay/overlay_custom_controller.dart';
 
+class MockIMovementsRepository extends Mock implements IMovementsRepository {}
 class MockISnackbarService extends Mock implements ISnackbarService {}
+class MockISecureStorageService extends Mock implements ISecureStorageService {}
 void configureMockDependencies() {
+  // Services
+  GetIt.I.registerSingleton<ISecureStorageService>(MockISecureStorageService());
+  
+  // Repositories
+  GetIt.I.registerSingleton<IMovementsRepository>(MockIMovementsRepository());
+
+  // UseCases
+  GetIt.I.registerFactory<GetMovementdUseCase>(() => GetMovementdUseCase(GetIt.I.get<IMovementsRepository>()));
+
+  // Services
+  GetIt.I.registerSingleton<GlobalKey<NavigatorState>>(GlobalKey<NavigatorState>());
+  GetIt.I.registerSingleton<GlobalKey<ScaffoldMessengerState>>(GlobalKey<ScaffoldMessengerState>());
+  
   GetIt.I.registerLazySingleton<ISnackbarService>(() => MockISnackbarService());
   GetIt.I.registerSingleton<ProviderContainer>(ProviderContainer(overrides: [
     // globalLoaderOverlayProvider.overrideWith(() => FakeRepository())
   ]));
+  GetIt.I.registerLazySingleton<GoRouter>(() => router);
 
   
 }

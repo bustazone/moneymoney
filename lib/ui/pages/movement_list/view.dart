@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:moneymoney/core/movement/domain/models/movement.dart';
 
 class MovementListScreenView extends StatelessWidget {
+
+  static const floatingButtonKey = Key('MovementListScreenView_floating_button');
+
   final List<Movement> movements;
   final Function onFilter;
   final Function onNew;
@@ -30,6 +33,7 @@ class MovementListScreenView extends StatelessWidget {
           ),
         ]),
         floatingActionButton: FloatingActionButton(
+          key: floatingButtonKey,
           child: const Icon( Icons.add ),
           onPressed: () {
             onFilter();

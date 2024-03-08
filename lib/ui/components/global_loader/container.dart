@@ -8,6 +8,9 @@ import 'package:moneymoney/ui/components/dialog_overlay/provider.dart';
 import 'package:moneymoney/ui/components/global_loader/provider.dart';
 
 class GlobalLoaderOverlay extends ConsumerWidget {
+
+  static const loaderKey = Key('GlobalLoaderOverlay_loader');
+
   const GlobalLoaderOverlay(
       {super.key});
 
@@ -15,7 +18,7 @@ class GlobalLoaderOverlay extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final globalLoaderOverlayProvider_ = ref.watch(globalLoaderOverlayProvider);
     if (globalLoaderOverlayProvider_ > 0) {
-      return Center(child: Container(key: const Key('loader'), color: const Color.fromRGBO(100, 100, 100, 0.4), child: Container(color: Colors.red, height: 200, width: 200,),));
+      return Center(child: Container(key: loaderKey, color: const Color.fromRGBO(100, 100, 100, 0.4), child: Container(color: Colors.red, height: 200, width: 200,),));
     } else {
       return Container();
     }

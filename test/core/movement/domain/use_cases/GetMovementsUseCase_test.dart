@@ -1,3 +1,4 @@
+import 'package:get_it/get_it.dart';
 import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:moneymoney/core/movement/domain/interfaces/movements_repository.dart';
@@ -7,6 +8,7 @@ import 'package:moneymoney/core/movement/domain/use_cases/GetMovementsUseCase.da
 import '../../../../mocks/injector_conf.dart';
 
 class MockIMovementsRepository extends Mock implements IMovementsRepository {}
+
 void main() {
 	group(
 		'get movement use case', 
@@ -16,7 +18,7 @@ void main() {
 
       setUp(() {
         configureMockDependencies();
-        mockMovementsRepository = MockIMovementsRepository();
+        mockMovementsRepository = GetIt.I.get<IMovementsRepository>();
         useCase = GetMovementdUseCase(mockMovementsRepository);
       });
 
@@ -24,7 +26,7 @@ void main() {
         resetMocktailState();
       });
 
-			test('return a ok list', () async {
+			test('return an ok list', () async {
         when(() => mockMovementsRepository.getMovementsList()).thenAnswer(
           (_) async {
             return Future.value([Movement.empty(), Movement.empty()]);

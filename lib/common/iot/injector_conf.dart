@@ -24,7 +24,7 @@ void configureDependencies() {
 
   // Repositories
   // GetIt.I.registerFactory<IMovementsRepository>(() => MovementsLocalRepository(storageService: GetIt.I.get<ISecureStorageService>()));
-  GetIt.I.registerFactory<IMovementsRepository>(() => MovementsNetworkRepository(netClient: GetIt.I.get<INetworkClient>()));
+  GetIt.I.registerSingleton<IMovementsRepository>(MovementsNetworkRepository(netClient: GetIt.I.get<INetworkClient>()));
 
   // UseCases
   GetIt.I.registerFactory<GetMovementdUseCase>(() => GetMovementdUseCase(GetIt.I.get<IMovementsRepository>()));

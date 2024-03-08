@@ -26,7 +26,7 @@ void main() {
       final element = tester.element(find.byType(GlobalLoaderOverlay));
       final container = ProviderScope.containerOf(element);
 
-      expect(find.byKey(const Key('loader')), findsNothing);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsNothing);
     });
 
 
@@ -46,7 +46,7 @@ void main() {
       final element = tester.element(find.byType(GlobalLoaderOverlay));
       final container = ProviderScope.containerOf(element);
 
-      expect(find.byKey(const Key('loader')), findsNothing);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsNothing);
 
       container
           .read(globalLoaderOverlayProvider.notifier)
@@ -56,7 +56,7 @@ void main() {
 
       await tester.pump();
 
-      expect(find.byKey(const Key('loader')), findsOneWidget);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsOneWidget);
     });
 
     testWidgets('GlobalLoaderOverlay complete', (tester) async {
@@ -74,7 +74,7 @@ void main() {
       final element = tester.element(find.byType(GlobalLoaderOverlay));
       final container = ProviderScope.containerOf(element);
 
-      expect(find.byKey(const Key('loader')), findsNothing);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsNothing);
 
       container
           .read(globalLoaderOverlayProvider.notifier)
@@ -84,11 +84,11 @@ void main() {
 
       await tester.pump(const Duration(seconds: 1));
 
-      expect(find.byKey(const Key('loader')), findsOneWidget);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsOneWidget);
 
       await tester.pump(const Duration(seconds: 4));
 
-      expect(find.byKey(const Key('loader')), findsNothing);
+      expect(find.byKey(GlobalLoaderOverlay.loaderKey), findsNothing);
     });
   });
 }
