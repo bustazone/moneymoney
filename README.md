@@ -112,11 +112,13 @@ https://pub.dev/packages/quick_actions
 
 ## CI/CD:
 
-Fastlane
+https://docs.flutter.dev/deployment/cd#fastlane
 
 ## Biometric, pin, etc login
 
 https://pub.dev/packages/local_auth
+
+## Splash screen
 
 ## Screen orientation
 
@@ -160,6 +162,17 @@ https://www.indusface.com/learning/how-to-implement-root-detection-in-android-ap
 https://m2pfintech.com/blog/how-to-block-android-app-installation-in-a-rooted-device/
 https://www.linkedin.com/pulse/limitations-google-play-integrity-api-ex-safetynet-criticalblue-47cec
 https://betterprogramming.pub/preventing-jailbreak-in-ios-apps-best-practices-and-techniques-c1364c833c08
+
+https://www.getastra.com/blog/mobile/ios/ios-app-security-checklist/
+https://developer.android.com/privacy-and-security/security-tips?hl=es-419
+
+https://github.com/google/secrets-gradle-plugin
+
+https://dev.to/djsmk123/is-your-flutter-application-secured-best-practices-for-developing-and-deploying-secure-flutter-apps-4njm
+https://www.appsealing.com/flutter-security/
+https://www.linkedin.com/pulse/flutter-app-security-simplified-best-practices-smart-ngwif
+https://medium.com/@lorenzogreco/how-to-secure-your-flutter-app-ca3039f1c166
+
 
 ## Native Bridge
 https://docs.flutter.dev/platform-integration/platform-channels

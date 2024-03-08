@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
+import 'package:moneymoney/common/servicies/network/network_client_dio.dart';
+import 'package:moneymoney/common/servicies/network/network_client_int.dart';
 import 'package:moneymoney/common/servicies/secure_storage/secure_storage_service.dart';
 import 'package:moneymoney/common/servicies/secure_storage/secure_storage_service_int.dart';
 import 'package:moneymoney/core/movement/data/repositories/movements_local_repository.dart';
+import 'package:moneymoney/core/movement/data/repositories/movements_network_repository.dart';
 import 'package:moneymoney/core/movement/domain/interfaces/movements_repository.dart';
 import 'package:moneymoney/core/movement/domain/use_cases/GetMovementsUseCase.dart';
 import 'package:moneymoney/ui/components/dialog_service/service.dart';
@@ -17,9 +20,11 @@ import 'package:moneymoney/common/overlay/overlay_custom_controller.dart';
 void configureDependencies() {
   // Services
   GetIt.I.registerSingleton<ISecureStorageService>(SecureStorageService());
+  GetIt.I.registerSingleton<INetworkClient>(DioNetClient());
 
   // Repositories
-  GetIt.I.registerFactory<IMovementsRepository>(() => MovementsLocalRepository());
+  // GetIt.I.registerFactory<IMovementsRepository>(() => MovementsLocalRepository(storageService: GetIt.I.get<ISecureStorageService>()));
+  GetIt.I.registerFactory<IMovementsRepository>(() => MovementsNetworkRepository(netClient: GetIt.I.get<INetworkClient>()));
 
   // UseCases
   GetIt.I.registerFactory<GetMovementdUseCase>(() => GetMovementdUseCase(GetIt.I.get<IMovementsRepository>()));
